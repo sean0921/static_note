@@ -24,11 +24,4 @@
 
 * repo link: https://github.com/hishamhm/htop.git
 * configuration:
-  * prefix: `/opt/htop`
-  * parameters: `./configure --prefix=/opt/htop`
-  * custom autotool config file: `/opt/htop/share/config.site`
-  * content:
-```
-CPPFLAGS=-I/opt/ncurses/include
-LDFLAGS=-L/opt/ncurses/lib
-```
+  * parameters: `./configure CFLAGS="-I/opt/ncurses/include" LDFLAGS="-L/opt/ncurses/lib --static"`
